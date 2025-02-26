@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da janela */
+    margin: 0;
+    background-color: #f0f0f0; /* Cor de fundo da página */
+}
+
+.grid-container {
+    display: grid; /* Usar grid para o layout */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de igual largura */
+    gap: 20px; /* Espaçamento entre os retângulos */
+    width: 80%; /* Largura total do container */
+    max-width: 600px; /* Largura máxima do container */
+}
+
+.rectangle {
+    height: 100px; /* Altura dos retângulos */
+}
+
+.red {
+    background-color: red; /* Cor de fundo vermelho */
+}
+
+.yellow {
+    background-color: yellow; /* Cor de fundo amarelo */
+}
+
+.green {
+    background-color: green; /* Cor de fundo verde */
+}

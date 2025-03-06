@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+initial-scale=1.0"
+    />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style_login.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+    <div class="caixadelogin">
+      <div class="login">
+        <h1>Login</h1>
+      </div>
+      <div class="ibox">
+        <input type="text" placeholder="Usuário" required />
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="ibox">
+        <input type="password" placeholder="Senha" required />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      <div class="lembrar-esquecer">
+        <label><input type="checkbox" /> Lembrar-me</label>
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+      <button type="submit" class="botao">Login</button>
+      <div class="registro-link">
+        <p>
+          Não possui uma conta?
+          <a href="/página de registro/homeR.html">Registrar</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

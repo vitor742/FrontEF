@@ -46,6 +46,8 @@ ul{
 ul li.item-menu{
     transition: .3s;
     animation: none;
+    width: 265px;
+    margin-left: 10px;
 }
 ul li.item-menu a{
     color: #000000;
@@ -56,7 +58,6 @@ ul li.item-menu a{
 }
 ul li.item-menu:hover{
     background:#0E00AE ;
-    border-radius: 20px;
 }
 ul li.item-menu a:hover{
     color: #ffffff;

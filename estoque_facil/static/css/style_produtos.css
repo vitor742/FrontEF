@@ -122,6 +122,17 @@ ul li.LinhasM {
     color: #000000;
 }
 
+.bi-search {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.bi-plus {
+    font-size: 35px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
 .ProdutosT{
     justify-content: left;
     align-items: left;
@@ -148,8 +159,10 @@ ul li.LinhasM {
 }
 
 .btnProduto{
-    padding: 20px 50px;
-    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+    padding: 20px 30px;
+    border-radius: 15px;
     border: none;
     background-color: #e1deff;
     box-shadow: 0px 6px 3px #bab9c5;
@@ -179,4 +192,7 @@ ul li.LinhasM {
     flex-direction: row;
     background-color: white;
     border-radius: 20px;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 10vh;
 }

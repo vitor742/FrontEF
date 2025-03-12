@@ -180,10 +180,6 @@ ul li.LinhasM {
     background-color: #90a8ff ;
 }
 
-.btnProduto:active{
-    background-color: #597cf9;
-}
-
 /* para o display para flex depois de terminar, NAO ESQUECE */
 
 .infoProdutosContainer{
@@ -258,11 +254,6 @@ ul li.LinhasM {
     border-radius: 10px;
     text-align: center;
     font-size: 15px;
-
-}
-
-.inputGroup2 input :active {
-    border: none;
 
 }
 

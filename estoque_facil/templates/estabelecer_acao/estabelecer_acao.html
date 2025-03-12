@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+<div id="damageControl">
     <header>
         <img src="{% static 'images/logo.png' %}"></img>
 
@@ -27,7 +28,7 @@
         <ul>
             <li class="OlaUsuario">
                 <h1>
-                    Ola program of boysetas!
+                    Olá Usuário!
                 </h1>
             </li>
             <li class="Not">
@@ -117,8 +118,52 @@
         
 
     </nav>
-    <div class="DashboardT">
-        <b>Dashboard</b>
+</div>
+    <div class="EstabelecerT">
+        <b>Estabelecer Ação</b>
+    </div>
+    <form class="addAcaoContainer">
+        <button type="submit" id="addAcao" class="btnBase"><i class="bi bi-plus"></i></button>
+        <div class="inputGroup">
+            <div class="inputGroup2">
+                <label>Titulo</label><input type="text" name="nomeAcao">
+            </div>
+            <div class="inputGroup2">
+                <label>Descrição</label><input type="text" name="descAcao">
+            </div>
+            <div class="inputGroup2">
+                <label>Responsável</label><input type="text" name="respAcao">
+            </div>
+            <div class="inputGroup2">
+                <label>Urgência</label><input type="text" name="urgeAcao">
+            </div>
+        </div>
+    </form>
+
+    <div class="addAcaoContainer" id="infoAcaoContainer">
+
+        <div class="infoEditTools">
+            <button class="btnBase" id="editAcao"><i class="bi bi-pencil"></i></button>
+            <button class="btnBase" id="delAcao"><i class="bi bi-trash"></i></button>
+        </div>
+
+        <div class="displayGroup">
+            <div class="displayGroup2">
+                <label>Titulo</label><button class="displayBtns">Placeholder</button>
+            </div>
+            <div class="displayGroup2">
+                <label>Descrição</label><button class="displayBtns">Placeholder</button>
+            </div>
+            <div class="displayGroup2">
+                <label>Responsável</label><button class="displayBtns">Placeholder</button>
+            </div>
+            <div class="displayGroup2">
+                <label>Status</label><button class="displayBtns">Placeholder</button>
+            </div>
+            <div class="displayGroup2">
+                <label>Urgencia</label><button class="displayBtns">Placeholder</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+#damageControl{
+    position: fixed;
+    overflow-y: auto;
+    width: 100%;
+    height: 60px;
+    top: 0px
 }
 
 header{
@@ -13,11 +23,9 @@ header{
 body {
     background-color: #F1F0FF;
     height: 100vh;
-}
-
-.DashboardT {
-    color: #0E00AE;
-    font-family: sans-serif;
+    overflow-y: auto;
+    margin-top: 90px;
+    margin-bottom: 120px
 }
 
 /* menu lateral  */
@@ -30,6 +38,8 @@ nav.menu-lateral{
     box-shadow: 2px 0 0 #000000;
     position:fixed;
     left:0;
+    overflow-y: auto;
+    font-family: "Poppins", sans-serif;
 }
 
 ul{
@@ -85,6 +95,14 @@ ul li.LinhasM {
     opacity: 40%;
 }
 /* header  */
+
+.Logo_Estoque_Facil {
+    width:135px;
+    height: 44px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
 .bi-bell {
         position: absolute; 
         top: 10px;            
@@ -106,13 +124,15 @@ ul li.LinhasM {
     font-size: 32px;
     color: #000000;
 }
+
 img {
     width:135px;
     height: 44px;
     margin-left: 8px;
     margin-top: 8px;
 }
-.DashboardT{
+
+.EstabelecerT{
     justify-content: left;
     align-items: left;
     display: block;
@@ -122,7 +142,9 @@ img {
     font-size: 38px;
     margin-left: 350px;
     margin-top: 40px;
+    color: #0E00AE;
 }
+
 .FuncionariosT {
     justify-content: left;
     align-items: left;
@@ -133,4 +155,141 @@ img {
     font-size: 38px;
     margin-left: 350px;
     margin-top: 40px; 
+}
+
+.addAcaoContainer{
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    display: flex;
+    padding: 30px;
+    padding-bottom: 50px;
+    height: auto;
+    margin-left: 350px;
+    margin-top: 40px;
+    width: 100%;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inputGroup {
+    display: flex;
+    font-size: 20px ;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputGroup2 {
+    display: flex;
+    font-size: 20px ;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+
+.inputGroup2 input {
+    width: 35vh;
+    height:7vh;
+    padding: 5px;
+    border: none;
+    background-color: #F1F0FF ;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.btnBase{
+    display: flex;
+    gap: 5px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: #e1deff;
+    box-shadow: 0px 6px 3px #bab9c5;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: 0.3s ease;
+}
+
+.btnBase:hover{
+    background-color: #90a8ff ;
+}
+
+
+.bi-plus{
+    padding: 0;
+    margin: 0;
+}
+
+#addAcao {
+    border-radius: 100px;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 5px;
+    padding-right: 13px;
+    padding-left: 13px;
+    margin-right: 190vh;
+}
+
+#infoAcaoContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.displayGroup{
+    display: flex;
+    gap: 15px;
+}
+
+.displayGroup2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.displayBtns{
+    width: 35vh;
+    height:7vh;
+    padding: 5px;
+    border: none;
+    background-color: #F1F0FF ;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.infoEditTools{
+    display: flex;
+    flex-direction: row;
+    margin-right: 180vh;
+    gap: 5px;
+}
+
+#editAcao {
+    border-radius: 100px;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 5px;
+    padding-right: 13px;
+    padding-left: 13px;
+}
+
+#delAcao {
+    border-radius: 100px;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 5px;
+    padding-right: 13px;
+    padding-left: 13px;
 }

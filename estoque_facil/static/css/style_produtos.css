@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -37,6 +39,7 @@ nav.menu-lateral{
     position:fixed;
     left:0;
     overflow-y: auto;
+    font-family: "Poppins", sans-serif;
 }
 
 ul{
@@ -181,7 +184,9 @@ ul li.LinhasM {
     background-color: #597cf9;
 }
 
-#infoProdutosContainer{
+/* para o display para flex depois de terminar, NAO ESQUECE */
+
+.infoProdutosContainer{
     align-items: center;
     display: flex;
     padding: 10px;
@@ -195,4 +200,82 @@ ul li.LinhasM {
     justify-content: center;
     font-weight: bolder;
     font-size: 10vh;
+}
+
+/* muda o para o display para none depois de terminar, NAO ESQUECE */
+
+#addDivProdutos {
+    display: none;
+    font-size: 20px ;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+#searchDivProdutos {
+    display: none;
+    font-size: 20px ;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.inputGroup {
+    display: flex;
+    font-size: 20px ;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputGroup2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    margin-bottom: -10px;
+    margin: 10px;
+}
+
+.inputGroup2 label {
+    flex: 1;
+    margin: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.inputGroup2 input {
+    width: 35vh;
+    height:7vh;
+    padding: 5px;
+    border: none;
+    background-color: #F1F0FF ;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.inputGroup2 input :active {
+    border: none;
+
+}
+
+#addButton{
+    margin-top: 40px;
+    width: 200px;
+    justify-content: center;
+    font-size: 18px;
+}
+
+#searchButton{
+    margin-top: 40px;
+    width: 200px;
+    justify-content: center;
+    font-size: 18px;
 }

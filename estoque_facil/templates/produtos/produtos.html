@@ -8,6 +8,7 @@
     <title>Produtos</title>
     <link rel="stylesheet" href="{% static 'css/style_produtos.css' %}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="{% static 'js/produtos.js' %}" defer></script>
 </head>
 <body>
 <div id="damageControl">
@@ -124,20 +125,61 @@
     </div>
     <div class="produtosContainer">
         <div >
-            <button class="btnProduto" id="addProduto"> 
+            <button onclick="changeDivAdd()" class="btnProduto" id="addProduto"> 
                 <i class="bi bi-plus"></i>Adicionar Produto 
             </button>
         </div>
         <div>
-            <button class="btnProduto" id="searchProduto">
+            <button onclick="changeDivSearch()" class="btnProduto" id="searchProduto">
                 <i class="bi bi-search"></i>Procurar Produto 
             </button>
         </div>
     </div>
 
-    <div id="infoProdutosContainer">
+    <div class="infoProdutosContainer" id="defaultDivProdutos">
         Aguardando ação<span class="pontinhos">...</span>
     </div>
     
+    <form class="infoProdutosContainer" id="addDivProdutos">
+        <div class="inputGroup">
+                <div class="inputGroup2">
+                        <label>Produto</label> <input type="text" name="nomeProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Quantidade Cx</label> <input type="number" name="qntCxProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Lote</label> <input type="text" name="loteProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Dt Fabricação</label> <input type="date" name="dataFabProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Dt Validade</label> <input type="date" name="dataValProduto">
+                </div>
+        </div>
+        <button class="btnProduto" id="addButton" type="submit">Adicionar</button>
+    </form>
+
+    <form class="infoProdutosContainer" id="searchDivProdutos">
+        <div class="inputGroup">
+                <div class="inputGroup2">
+                        <label>Produto</label> <input type="text" name="nomeProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Quantidade Cx</label> <input type="number" name="qntCxProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Lote</label> <input type="text" name="loteProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Dt Fabricação</label> <input type="date" name="dataFabProduto">
+                </div>
+                <div class="inputGroup2">
+                        <label>Dt Validade</label> <input type="date" name="dataValProduto">
+                </div>
+        </div>
+        <button class="btnProduto" id="searchButton" type="submit">Pesquisar</button>
+    </form>
 </body>
 </html>

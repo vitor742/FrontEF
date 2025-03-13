@@ -145,18 +145,6 @@ img {
     color: #0E00AE;
 }
 
-.FuncionariosT {
-    justify-content: left;
-    align-items: left;
-    display: block;
-    height: 100px;
-    text-align: left;
-    font-family: Arial;
-    font-size: 38px;
-    margin-left: 350px;
-    margin-top: 40px; 
-}
-
 .addAcaoContainer{
     font-family: "Poppins", sans-serif;
     align-items: center;

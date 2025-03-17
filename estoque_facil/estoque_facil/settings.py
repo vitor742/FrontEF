@@ -13,11 +13,15 @@ import firebase_admin
 from firebase_admin import credentials
 from pathlib import Path
 
-FIREBASE_CREDENTIALS = "config/firebase_cred.json"
+FIREBASE_CREDENTIALS = "./config/firebase_cred.json"
 
-cred = credentials.Certificate(FIREBASE_CREDENTIALS)
-firebase_admin.initialize_app(cred)
-
+try:
+    cred = credentials.Certificate(FIREBASE_CREDENTIALS)
+    firebase_admin.initialize_app(cred)
+    print("Firebase inicializado com sucesso!")
+except Exception as e:
+    print(f"Erro ao inicializar o Firebase: {e}")
+    
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

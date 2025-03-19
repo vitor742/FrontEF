@@ -5,20 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funcionarios</title>
+    <title>Funcionários</title>
     <link rel="stylesheet" href="{% static 'css/style_funcionarios.css' %}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="{% static 'js/tema.js' %}" defer></script>
 </head>
 <body>
+<div id="damageControl">
     <header>
-        <img src="{% static 'images/logo.png' %}" class="Logo_Estoque_Facil">
+        <img src="{% static 'images/logo.png' %}"></img>
 
         <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
 
         <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
 
         <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
+
+        <button id="toggleTheme"> B </button>
     </header>
 
     <!--Código do menu lateral-->
@@ -118,38 +121,13 @@
         
 
     </nav>
+</div>
     <div class="FuncionariosT">
         <b>Funcionários</b>
     </div>
 
-    <div class="containerfuncionario1">
-        <a href="#">
-            <div class="imagem1"></div>
-            </div> 
-        </a> 
-             
-         <div class="containerfuncionario2">
-        <div class="NomeIdF">
-            <h1>Mitakaro Havara </h1>
-            <h1>ID:69</h1> 
-        </div>
-            <div class="F1">Funções do Funcionário:</div>
-        </div>
-
-        <div class="containerfuncionarios3">
-            <div class="Encargosf">
-            <h1><u><strong>Encargos do Funcionário:</u></strong></h1>
-            <h1>Repor os produtos do setor de laticínios /   Concluída</h1>
-            <h1>Organizar a prateleira de bebidas    /       Pendente</h1>
-            <h1>Organizar a prateleira do setor de carnes  / Pendente</h1>
-            </div>
-        </div>
 
 
-        <div class="Atrb"><p><u>Atribuições do funcionário</u></p></div>
-    
-        <div class="retangulo1"><a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a></div>
-        <div class="retangulo2"><a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a></div>
-        <div class="retangulo3"><a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a></div>
+    </div>
 </body>
 </html>

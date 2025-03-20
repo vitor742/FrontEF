@@ -201,3 +201,39 @@ img {
     color: var(--hover-light);
     transition: color 0.3s, color 0.3s;
 }
+
+.funcionariosContainer{
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    height: 500px;
+    margin-left: 350px;
+    margin-top: 10px;
+    width: 71%;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.funcionarioSpecific{
+    width: 135vh;
+    height: 70px;
+    margin-top: 10px;
+    align-items: flex-start;
+    background-color: #2F2E2E;
+    font-size: 5vh;
+    flex-direction: row;
+}
+
+.funcionarioImg {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    width: 70;
+    height: auto;
+    border-radius: 100%;
+    over
+}

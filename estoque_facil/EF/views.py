@@ -5,18 +5,21 @@ from firebase_admin import firestore
 from firebase_admin import credentials
 from django.conf import settings
 
-# Inicializa o Firebase com as credenciais configuradas no settings.py
+# Isso aqui é o que tá inicializando o firebase, NAO MEXE
 def initialize_firebase():
     if not firebase_admin._apps:
         cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS)
         firebase_admin.initialize_app(cred)
     return firestore.client()
 
-# View para processar o login
+# Essa parte é a parte do login
+
 def login_view(request):
     if request.method == "POST":
         username = request.POST.get('username')
         access_key = request.POST.get('access_key')
+
+# I
 
         try:
             # Inicializa o Firestore

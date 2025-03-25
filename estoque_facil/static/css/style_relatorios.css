@@ -139,10 +139,12 @@ img {
     margin-left: 310px;
     display: flex; /* Usar flexbox para alinhar os retângulos lado a lado */
     gap: 30px; /* Espaçamento entre os retângulos */
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .Vermelho {
-    background-color: red; /* Cor de fundo vermelho */
+    background-color: rgb(255, 8, 8); /* Cor de fundo vermelho */
     border-radius: 10px;
 }
 
@@ -154,9 +156,6 @@ img {
 .Verde {  
     border-radius: 10px;
     background-color: rgb(14, 209, 14); /* Cor de fundo verde */
-}
-.containerBlocoDash :hover{
-    background: #0E00AE;
 }
 
 .R {
@@ -170,7 +169,7 @@ img {
     display: flex;
     padding-left: 10px;
     padding-top: 8px;
-    font-size: large;
+    font-size: medium;
 }
 
 .containerBlocoDash h1 {
@@ -183,9 +182,13 @@ img {
 }
 
 .tabelaD1 {
+    border-radius: 20px;
+    width: 40%;
     border: 1px #000000;
-    margin-right: 90px;
-    margin-top: 190px;
+    justify-content: right;
+    margin-top: 80px;
+    margin-left: 20%;
+    height: 100px;
 }
 
 th {
@@ -194,7 +197,8 @@ th {
 
 th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 20px;
+    text-align: center;
 }
 .Tlinha2, .Tlinha4 {
     background-color: #f1f0ff;

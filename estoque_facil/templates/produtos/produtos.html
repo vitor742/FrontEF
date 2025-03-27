@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/style_produtos.css' %}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="{% static 'js/produtos.js' %}" defer></script>
+    <script src="{% static 'js/tema.js' %}" defer></script>
 </head>
 <body>
 <div id="damageControl">
@@ -20,6 +21,10 @@
         <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
 
         <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
+
+        <button id="toggleTheme" class="toggle-theme-btn">
+            Alternar Tema
+        </button>
     </header>
 
     <!--Código do menu lateral-->
@@ -123,6 +128,7 @@
     <div class="ProdutosT">
         <b>Produtos</b>
     </div>
+    
     <div class="produtosContainer">
         <div >
             <button onclick="changeDivAdd()" class="btnProduto" id="addProduto"> 

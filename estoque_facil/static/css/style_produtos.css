@@ -1,5 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --body-light: #F1F0FF; /* Fundo do tema claro */
+    --text-light: #000000; /* Texto do tema claro */
+    --header-light: #ffffff; /* Header do tema claro */
+    --hover-light: #0E00AE; /* Interagiveis do tema claro */
+    --lines-light: #000000; /* Linhas do tema claro */
+  }
+  
+  [data-theme="dark"] {
+    --body-dark: #2F2E2E; /* Fundo do tema escuro */
+    --text-dark: #ffffff; /* Texto do tema escuro */
+    --header-dark: #232323; /* Header do tema escuro*/
+    --hover-dark: #FFA600; /* Interagiveis do tema escuro */
+    --lines-dark: #000000; /* Linhas do tema escuro */
+    --button-dark: #FFDFA4; /* Butão do tema escuro */
+  }
+
+  [data-theme="dark"] body {
+    background-color: var(--body-dark);
+    color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  [data-theme="dark"] header {
+    background-color: var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  [data-theme="dark"] nav.menu-lateral {
+    background-color: var(--header-dark);
+    box-shadow: 2px 0 0 var(--lines-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  [data-theme="dark"] ul li.item-menu {
+    color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  [data-theme="dark"] ul li.item-menu a {
+    color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  [data-theme="dark"] ul li.item-menu:hover {
+    background-color: var(--hover-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  [data-theme="dark"] ul li.item-menu a:hover {
+    color: var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [data-theme="dark"] .btnProduto:hover {
+    background-color: var(--hover-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .btnProduto.clicked {
+    background-color: #FFA600; 
+}
+
+    [data-theme="dark"] .ProdutosT{
+    color: var(--hover-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+  [data-theme="dark"] .btnProduto {
+    background-color: var(--button-dark);
+    box-shadow: 0px 6px 3px var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    [data-theme="dark"] .infoProdutosContainer{
+    color: var(--text-dark);
+    background-color: var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    [data-theme="dark"] .bi-bell {
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="dark"] .bi-gear {
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="dark"] .bi-printer {
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
 *{
     padding: 0;
     margin: 0;
@@ -18,14 +113,16 @@ header{
     background-color: #ffffff;
     width: 100%;
     height: 60px;
-    box-shadow: 0 2px 0
+    box-shadow: 0 2px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 body {
     background-color: #F1F0FF;
     height: 100vh;
     overflow-y: auto;
     margin-top: 90px;
-    margin-bottom: 120px
+    margin-bottom: 120px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* menu lateral  */
@@ -40,44 +137,59 @@ nav.menu-lateral{
     left:0;
     overflow-y: auto;
     font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul{
     height: 100%;
     list-style-type: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 ul li.item-menu{
     transition: .3s;
     animation: none;
     width: 265px;
     margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 ul li.item-menu a{
     color: #000000;
     text-decoration: none;
     font-size: 18px;
     padding: 20px 4%;
-    display: flex;    
+    display: flex; 
+    transition: background-color 0.3s ease, color 0.3s ease;  
 }
+
 ul li.item-menu:hover{
     background:#0E00AE ;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 ul li.item-menu a:hover{
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     padding: 20px 4%;
     display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 ul li.item-menu a .txt-link{
     margin-left:10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 ul li.LinhasM {
     height: 1px;
     background-color: #000000;
     width: 265px;
     margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .OlaUsuario{
     margin-top: 10px;
     justify-content: center;
@@ -85,11 +197,14 @@ ul li.LinhasM {
     font-family: sans-serif;
     margin-bottom: 3px;
 }
+
 .Not{
     margin-left: 7px;  
     margin-top: 8px;
     margin-bottom: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .Edireitos {
     margin-top: 260px;
     opacity: 40%;
@@ -109,31 +224,38 @@ ul li.LinhasM {
         right: 10px;           
         font-size: 32px;
         color: #000000;   
-      }
+        transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .bi-gear {
     position: absolute; 
     top: 10px;            
     right: 58px;           
     font-size:32px;
-    color: #000000
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }     
+
 .bi-printer {
     position: absolute; 
     top: 10px;            
     right: 108px;           
     font-size: 32px;
     color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .bi-search {
     font-size: 20px;
     margin-right: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .bi-plus {
     font-size: 35px;
     margin-top: -10px;
     margin-bottom: -10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .ProdutosT{
@@ -147,6 +269,7 @@ ul li.LinhasM {
     margin-left: 350px;
     margin-top: 40px;
     color: #0E00AE;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .produtosContainer{
@@ -159,6 +282,7 @@ ul li.LinhasM {
     margin-top: 0px;
     width: 71%;
     flex-direction: row;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btnProduto{
@@ -173,11 +297,12 @@ ul li.LinhasM {
     font-size: 15px;
     font-weight: bold;
     font-family: sans-serif;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btnProduto:hover{
     background-color: #90a8ff ;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* para o display para flex depois de terminar, NAO ESQUECE */
@@ -196,6 +321,7 @@ ul li.LinhasM {
     justify-content: center;
     font-weight: bolder;
     font-size: 10vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* muda o para o display para none depois de terminar, NAO ESQUECE */
@@ -207,6 +333,7 @@ ul li.LinhasM {
     justify-content: center;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #searchDivProdutos {
@@ -216,6 +343,7 @@ ul li.LinhasM {
     justify-content: center;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -225,6 +353,7 @@ ul li.LinhasM {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .inputGroup2 {
@@ -269,4 +398,8 @@ ul li.LinhasM {
     width: 200px;
     justify-content: center;
     font-size: 18px;
+}
+
+.btnProduto.clicked {
+    background-color: #FFA600;
 }

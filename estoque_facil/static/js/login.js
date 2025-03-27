@@ -24,8 +24,8 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
     try {
         // Consulta ao Firestore para verificar as credenciais
-        const usersRef = collection(db, 'clients');
-        const q = query(usersRef, where('username', '==', username), where('access_key', '==', accessKey));
+        const usersRef = collection(db, 'funcionários');
+        const q = query(usersRef, where('nome', '==', username), where('access_key', '==', accessKey));
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {

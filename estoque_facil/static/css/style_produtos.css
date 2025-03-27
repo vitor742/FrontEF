@@ -305,7 +305,7 @@ ul li.LinhasM {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* para o display para flex depois de terminar, NAO ESQUECE */
+/* muda o display para flex depois de terminar, NAO ESQUECE */
 
 .infoProdutosContainer{
     align-items: center;

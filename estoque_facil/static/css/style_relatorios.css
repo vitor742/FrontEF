@@ -121,7 +121,7 @@ img {
     font-family: Arial;
     font-size: 38px;
     margin-left: 350px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .FuncionariosT {
     justify-content: left;
@@ -136,10 +136,11 @@ img {
 }
 
 .containerBlocoDash {
-    margin-left: 310px;
+    margin-left: 350px;
+    margin-right: 40px;
     display: flex; /* Usar flexbox para alinhar os retângulos lado a lado */
     gap: 30px; /* Espaçamento entre os retângulos */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     justify-content: space-between;
 }
 
@@ -181,13 +182,49 @@ img {
     justify-content: right;
 }
 
+.RelatoriosTabT1{
+    justify-content: left;
+    align-items: left;
+    display: block;
+    height: 45px;
+    text-align: left;
+    font-family: Arial;
+    font-size: 38px;
+    margin-left: 350px;
+    margin-top: 45px;
+    margin-right: 35px;
+    color: #7269CC;
+}
+.linha1{
+    height: 2px;
+    width: 1520px;
+    margin-left: 350px;
+    background-color: #000000;
+}
+.Rel1Tip {
+    margin-left: 350px;
+    margin-right: 1300px;
+    display: flex; 
+    margin-top: 20px;
+    justify-content: space-between;
+    background-color: #e1deff;
+    height: 50px;
+    border-radius: 12px;
+    justify-content: center;
+}
+.Rel1Tip p {
+    font-family: Arial;
+    font-size: 34px; 
+    margin-top: 5px;
+   
+}
 .tabelaD1 {
     border-radius: 20px;
-    width: 40%;
+    width: 1500px;
     border: 1px #000000;
     justify-content: right;
-    margin-top: 80px;
-    margin-left: 20%;
+    margin-top: 20px;
+    margin-left: 350px;
     height: 100px;
 }
 

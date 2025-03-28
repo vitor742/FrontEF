@@ -11,33 +11,40 @@ const firebaseConfig = {
     appId: "1:201462826581:web:d10a08a1380073fdcfb6dc"
   };
 
-// Inicializa o Firebase
+// Inicializa o Firebase NÃO MEXE PELO AMOR DE DEUS
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
+
+// Isso aqui é a lógica de login, se vc nao sabe oque tá fazendo (tipo eu), NÃO MEXE, ah e eu acho que tipo
+// uma sessão nao tá sendo criada, depois eu olho isso
+
 document.getElementById('loginForm').addEventListener('submit', async function (event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
+    event.preventDefault();
 
     const username = document.getElementById('username').value;
     const accessKey = document.getElementById('access_key').value;
 
     try {
-        // Consulta ao Firestore para verificar as credenciais
-        const usersRef = collection(db, 'clients');
-        const q = query(usersRef, where('username', '==', username), where('access_key', '==', accessKey));
+        const usersRef = collection(db, 'funcionários');
+        const q = query(usersRef, where('nome', '==', username), where('access_key', '==', accessKey));
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
             console.log("Login bem-sucedido!");
-            alert("Login bem-sucedido!");
-            window.location.href = "/dashboard";  // Exemplo de redirecionamento
+            window.location.href = "/dashboard";
         } else {
             console.log("Credenciais inválidas.");
-            alert("Credenciais inválidas.");
-        }
+            let divMessage = document.querySelector(".loginMessage");
+            divMessage.style.display = "flex";
+
+            setTimeout(() => {
+                divMessage.style.display = "none";
+            }, 10000);
+                    
+            }
     } catch (error) {
         console.log("Erro ao tentar autenticar:", error);
-        alert("Erro ao tentar fazer login.");
     }
 });

@@ -8,12 +8,28 @@
 body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     background: black;
     background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoEstoque {
+    margin-bottom: 30px;
+}
+
+.login {
+    text-align: center;
 }
 
 .caixadelogin {
@@ -26,10 +42,7 @@ body {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0,0,0.);
 }
-.login{
-    font-size: 22px;
-    text-align: center;
-}
+
 .ibox{
     position: relative;
     width: 100%;
@@ -102,3 +115,12 @@ body {
     text-decoration: underline;
 }
 
+.loginMessage {
+    display: none;
+    color: red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 30px ;
+}

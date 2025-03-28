@@ -8,45 +8,92 @@
     --lines-light: #000000; /* Linhas do tema claro */
   }
   
-  [data-theme="dark"] {
+[data-theme="dark"] {
     --body-dark: #2F2E2E; /* Fundo do tema escuro */
     --text-dark: #ffffff; /* Texto do tema escuro */
-    --header-light: #232323; /* Header do tema escuro*/
-    --hover-light: #FFA600; /* Interagiveis do tema escuro */
-    --lines-light: #000000; /* Linhas do tema escuro */
+    --header-dark: #232323; /* Header do tema escuro*/
+    --hover-dark: #FFA600; /* Interagiveis do tema escuro */
+    --lines-dark: #000000; /* Linhas do tema escuro */
+    --button-dark: #FFDFA4; /* Butão do tema escuro */
   }
 
-  [data-theme="dark"] body {
+[data-theme="dark"] body {
     background-color: var(--body-dark);
     color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  [data-theme="dark"] header {
+[data-theme="dark"] header {
     background-color: var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  [data-theme="dark"] nav.menu-lateral {
+[data-theme="dark"] nav.menu-lateral {
     background-color: var(--header-dark);
     box-shadow: 2px 0 0 var(--lines-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  [data-theme="dark"] ul li.item-menu {
+[data-theme="dark"] ul li.item-menu {
     color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  [data-theme="dark"] ul li.item-menu a {
+[data-theme="dark"] ul li.item-menu a {
     color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  [data-theme="dark"] ul li.item-menu:hover {
+[data-theme="dark"] ul li.item-menu:hover {
     background-color: var(--hover-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  [data-theme="dark"] ul li.item-menu a:hover {
+[data-theme="dark"] ul li.item-menu a:hover {
     color: var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
+  [data-theme="dark"] .btnProduto:hover {
+    background-color: var(--hover-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+[data-theme="dark"] .btnProduto.clicked {
+    background-color: #FFA600; 
+}
+
+    [data-theme="dark"] .FuncionariosT{
+    color: var(--hover-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+  [data-theme="dark"] .btnProduto {
+    background-color: var(--button-dark);
+    box-shadow: 0px 6px 3px var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    [data-theme="dark"] .funcionarioSpecific{
+    color: var(--text-dark);
+    background-color: var(--header-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    [data-theme="dark"] .bi-bell {
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="dark"] .bi-gear {
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="dark"] .bi-printer {
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 *{
     padding: 0;
     margin: 0;

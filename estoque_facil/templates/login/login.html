@@ -6,16 +6,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="{% static 'css/style_login.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style_login2.css' %}" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-<!-- Carregar seu script personalizado, agora usando módulos -->
-<script src="{% static 'js/login.js' %}" type="module"></script>
+<script src="{% static 'js/login2.js' %}" type="module"></script>
 
   </head>
   <body>
+  <div class="container">
+    <div class="logoEstoque"><img src="{% static 'images/logo.png' %}" alt="logo Estoque Facil"> </div>
     <div class="caixadelogin">
       <div class="login">
         <h1>Login</h1>
@@ -29,8 +30,10 @@
           <input type="password" id="access_key" placeholder="Chave de Acesso" required />
           <i class="bx bxs-lock-alt"></i>
         </div>
+        <div class="loginMessage"> Credenciais Inválidas </div>
         <button type="submit" class="botao">Login</button>
       </form>
     </div>
+  </div>
   </body>
 </html>

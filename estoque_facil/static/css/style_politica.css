@@ -134,3 +134,16 @@ img {
     margin-left: 350px;
     margin-top: 40px; 
 }
+
+.Politica  {
+    margin-left: 350px;
+    align-content: left;
+    justify-content: left;
+    background-color:white;
+    border-radius: 10px;
+    margin-right: 40px;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    padding-top: 1px;
+}

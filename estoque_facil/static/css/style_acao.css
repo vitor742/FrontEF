@@ -241,7 +241,7 @@ img {
     height: auto;
     margin-left: 350px;
     margin-top: 40px;
-    width: 100%;
+    width: 75%;
     flex-direction: row;
     background-color: white;
     border-radius: 20px;
@@ -314,6 +314,7 @@ img {
     padding-right: 13px;
     padding-left: 13px;
     margin-right: 190vh;
+    margin-left: 55vh;
 }
 
 #infoAcaoContainer {

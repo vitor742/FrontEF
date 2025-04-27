@@ -121,24 +121,37 @@
 
     </nav>
     <div class="DashboardT">
-        <b>Estatísticas</b>
+        <b>Estatística das Prateleiras</b>
     </div>
-    <section class="estatisticas">
-        <div class="chart-container">
+
+    <div class="containerBlocoDash">
+        <div class="R Vermelho">
+            <p><u>Menos vencimentos no último mês</u></p>
+            <h1>29</h1>
+        </div>
+        <div style="width: 313px; height:57px;" class="R Cinza">
+            <p>Configurações de Gráfico</p>
+        </div>
+        <div class="R Verde">
+            <p>Mais vencimentos no último mês</p>
+            <p>Salgados</p>
+            <h1>456</h1>
+        </div>
+</div>
+    
+    <!--Código dos Gráficos-->
+
+        <div style="width: 700px; height: 400px;" class="chart-container">
             <canvas id="line-chart" class="chart-size"></canvas>
         </div>
-        </section>
-
 
 
     <script>
         const data = {
             labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
             datasets: [{
-                label: "Investimento",
+                label: "Produtos a vencer nas prateleiras (setor)       18/11/2024 à 24/11/2024",
                 data: [1000, 1200, 1100, 1300, 1400, 1500],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
             }]
         };
     
@@ -157,6 +170,39 @@
             options: options
         });
     </script>
+
+    <div style="width: 700px; height: 400px;" class="chart-container2">
+        <canvas id="line-chart2" class="chart-size2"></canvas>
+    </div>
+
+
+    <script>
+    const data2 = {
+        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+        datasets: [{
+            label: "Investimento",
+            data: [1000, 1200, 1100, 1300, 1400, 1500],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+        }]
+    };
+
+    const options2 = {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    const ctx2 = document.getElementById('line-chart').getContext('2d');
+    const chart2 = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+    });
+</script>
+    
     
 </body>
 </html>

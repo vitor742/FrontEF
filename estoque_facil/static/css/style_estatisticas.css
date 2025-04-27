@@ -135,37 +135,115 @@ img {
     margin-left: 350px;
     margin-top: 40px; 
 }
-.chart-container {
+.containerBlocoDash {
+    justify-content: center;
+    align-items: center;
+    margin-right: 110px;
+    display: flex; /* Usar flexbox para alinhar os retângulos lado a lado */
+    gap: 30px; /* Espaçamento entre os retângulos */
+}
+
+.Vermelho {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-start; /* Posiciona mais acima */
-    margin-top: 20px; /* Ajusta espaço acima */
+    align-items: center; /* Posiciona mais acima */
+    margin-top: 200px; /* Ajusta espaço acima */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: 350px;
+}
+
+.Cinza {   
+    border-radius: 10px;
+    background-color: rgb(126, 126, 121); /* Cor de fundo amarelo */
+    display: flex; /* Ativar flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Garante que o texto fique bem alinhado */
+    font-size: 20px; /* Tamanho do texto */
+    line-height: 200px;
+}
+
+.Verde {  
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Posiciona mais acima */
+    margin-top: 200px; /* Ajusta espaço acima */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: 350px;
+}
+.containerBlocoDash :hover{
+    background: #0E00AE;
+}
+
+.R {
+    width: 500px;
+    height: 120px;
+}
+
+.containerBlocoDash p {
+    font-family: sans-serif;
+    color: #ffffff;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 8px;
+    font-size: large;
+}
+
+.containerBlocoDash h1 {
+    font-family: sans-serif;
+    color: #ffffff;
+    display: flex;
+    padding-right: 20px;
+    padding-top: 40px;
+    justify-content: right;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Posiciona mais acima */
+    margin-top: 200px; /* Ajusta espaço acima */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: 350px;
 }
 .chart-size {
-    width: 300px;
-    height: 150px;
+    width: 600px; /* Defina a largura que deseja */
+    height: 300px; /* Defina a altura que deseja */
 }
 .chart-container canvas {
     display: block;
     width: 100%; /* Largura total do contêiner */
     height: auto; /* Proporção correta */
+}
 .line-chart {
     width: 100%;
     height: 400px;
 }
-.estatisticas {
-    margin-left: 300px; /* Para compensar o menu lateral */
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o gráfico horizontalmente */
-    justify-content: center; /* Centraliza na vertical */
-    height: calc(100vh - 100px); /* Ocupa o espaço restante */
+.line-chart2 {
+    width: 100%;
+    height: 400px;
 }
-.estatisticas, .chart-container, canvas {
-    border: 1px solid red;
+.chart-container2 {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Posiciona mais acima */
+    margin-top: 300px; /* Ajusta espaço acima */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: 1200px;
+}
+.chart-size2 {
+    width: 600px; /* Defina a largura que deseja */
+    height: 300px; /* Defina a altura que deseja */
 }

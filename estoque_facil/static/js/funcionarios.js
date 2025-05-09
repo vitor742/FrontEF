@@ -1,11 +1,12 @@
-const button1 = document.querySelector("button")
-const modal = document.querySelector("dialog")
-const buttonClose = document.querySelector("dialogbutton")
+const showPopup = document.querySelector(".show-popup");
+const popupContainer = document.querySelector(".popup-container");
+const closeBtn =  document.querySelector(".close-btn");
 
-button.onclick = function(){
-    modal.show()
+showPopup.onclick = () => {
+    popupContainer.classList.add('active');
 }
 
-buttonClose.onclick = function(){
-    modal.close()
+closeBtn.onclick = () => {
+    popupContainer.classList.remove('active');
 }
+

@@ -123,11 +123,6 @@
 
     </nav>
 </div>
-    <div id="configContainer">
-        <button id="toggleTheme" class="toggle-theme-btn">
-            <i class="bi bi-sun"></i>
-        </button>
-    </div>
     <div class="ProdutosT">
         <b>Produtos</b>
     </div>
@@ -149,13 +144,17 @@
         Aguardando ação<span class="pontinhos">...</span>
     </div>
     
-    <form class="infoProdutosContainer" id="addDivProdutos">
+    <form class="infoProdutosContainer" id="addDivProdutos" method="post" action="{% url 'addProdutos' %}">
+        {% csrf_token %}
         <div class="inputGroup">
                 <div class="inputGroup2">
                         <label>Produto</label> <input type="text" name="nomeProduto">
                 </div>
                 <div class="inputGroup2">
                         <label>Quantidade Cx</label> <input type="number" name="qntCxProduto">
+                </div>
+                <div class="inputGroup2">
+                    <label>Produtos P/Cx</label> <input type="number" name="qntPCxProduto">
                 </div>
                 <div class="inputGroup2">
                         <label>Lote</label> <input type="text" name="loteProduto">
@@ -179,6 +178,9 @@
                         <label>Quantidade Cx</label> <input type="number" name="qntCxProduto">
                 </div>
                 <div class="inputGroup2">
+                    <label>Produtos P/Cx</label> <input type="number" name="qntPCxProduto">
+                </div>
+                <div class="inputGroup2">
                         <label>Lote</label> <input type="text" name="loteProduto">
                 </div>
                 <div class="inputGroup2">
@@ -187,8 +189,50 @@
                 <div class="inputGroup2">
                         <label>Dt Validade</label> <input type="date" name="dataValProduto">
                 </div>
+                
         </div>
         <button class="btnProduto" id="searchButton" type="submit">Pesquisar</button>
     </form>
+
+        <div class="addProdutoContainer" id="infoProdutoContainer">
+
+        <div class="infoEditTools">
+            <button class="btnBase" id="editAcao"><i class="bi bi-pencil"></i></button>
+            <button class="btnBase" id="delAcao"><i class="bi bi-trash"></i></button>
+        </div>
+        <div class="displayGroup">
+            {% for produto in produtos %}
+                <div class="displayGroup2">
+                    <label>Produto</label>
+                    <button class="displayBtns">{{ tarefa.nomeProduto|default:"Sem Nome" }}</button>
+                </div>
+                <div class="displayGroup2">
+                    <label>Lote</label>
+                    <button class="displayBtns">{{ tarefa.loteProduto|default:"Sem Lote" }}</button>
+                </div>
+                <div class="displayGroup2">
+                    <label>Qnt Cx</label>
+                    <button class="displayBtns">{{ tarefa.qntCxProduto|default:"Sem Qnt Caixas" }}</button>
+                </div>
+                <div class="displayGroup2">
+                    <label>Produtos/Cx</label>
+                    <button class="displayBtns">{{ tarefa.qntProdutoCx|default:"Sem Produtos/Cx" }}</button>
+                </div>
+                <div class="displayGroup2">
+                    <label>Dt Fabricação</label>
+                    <button class="displayBtns">{{ tarefa.dataFabProduto|default:"Sem Dt Fab" }}</button>
+                </div>
+                <div class="displayGroup2">
+                    <label>Dt Validade</label>
+                    <button class="displayBtns">{{ tarefa.dataValProduto|default:"Sem Dt Val" }}</button>
+                </div>
+            <div id="defaultProdutosList">
+            {% empty %}
+                Nenhum produto encontrado
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

@@ -239,7 +239,7 @@ img {
     padding: 30px;
     padding-bottom: 50px;
     height: auto;
-    margin-left: 350px;
+    margin-left: 24%;
     margin-top: 40px;
     width: 75%;
     flex-direction: row;
@@ -323,23 +323,26 @@ img {
     flex-wrap: wrap;
 }
 
-.displayGroup{
+.displayGroup {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-right: 38vh;
 }
 
 .displayGroup2 {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: calc(20% - 15px); 
 }
 
-.displayBtns{
-    width: 35vh;
-    height:7vh;
+.displayBtns {
+    width: 100%;
+    height: 7vh;
     padding: 5px;
     border: none;
-    background-color: #F1F0FF ;
+    background-color: #F1F0FF;
     border-radius: 10px;
     text-align: center;
     font-size: 15px;

@@ -96,6 +96,34 @@ def addAcao(request):
     else:
         return JsonResponse({"erro": "Método não permitido"}, status=405)
 
+def addFuncionario(request):
+    if request.method == 'POST':
+        db = initialize_firebase()
+
+        nome_funcionario = request.POST.get('nome')
+        cpf_funcionario = request.POST.get('cpf')
+        data_funcionario = request.POST.get('data')
+        sexo_funcionario = request.POST.get('sexo')
+        tel_funcionario = request.POST.get('tel')
+        email_funcionario = request.POST.get('mail')
+
+        doc_ref = db.collection("funcionários").document()
+        doc_ref.set({
+            "nome_funcionario": nome_funcionario,
+            "cpf_funcionario": cpf_funcionario,
+            "data_funcionario": data_funcionario,
+            "sexo_funcionario": sexo_funcionario,
+            "tel_funcionario": tel_funcionario,
+            "email_funcionario": email_funcionario
+            
+        })
+
+        print("Funcionario cadastrado com sucesso!")  # Isso vai para o console
+
+        return redirect('funcionarios')  # Isso redireciona o usuário de volta para a página
+    else:
+        return JsonResponse({"erro": "Método não permitido"}, status=405)
+
 def listAcao_view(request):
     db = initialize_firebase()
     tarefas_ref = db.collection('tarefas')

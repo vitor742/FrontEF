@@ -141,7 +141,7 @@
     </div>
      <button class="button21" id="butao">cadastro</button>
     <dialog id="dialogo">
-<form class="form">
+<form class="form" method="post" action="{% url 'addFuncionarios' %}>
     <div class="container" style="text-align: center;">
       <h1>Cadastro de Usuários</h1><br>
       
@@ -151,8 +151,8 @@
       </div>
        <br>
       <div class="mb-3">
-        <label for="idade" class="form-label">Cpf</label>
-        <input id="idade" name="idade" type="text" class="form-control form-control-sm" required>
+        <label for="cpf" class="form-label">Cpf</label>
+        <input id="cpf" name="cpf" type="text" class="form-control form-control-sm" required>
       </div>
       <br>
       <div class="mb-3">

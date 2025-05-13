@@ -1,12 +1,7 @@
-const showPopup = document.querySelector(".show-popup");
-const popupContainer = document.querySelector(".popup-container");
-const closeBtn =  document.querySelector(".close-btn");
+const button = document.getElementById("butao")
+const modal = document.getElementById("dialogo")
 
-showPopup.onclick = () => {
-    popupContainer.classList.add('active');
-}
-
-closeBtn.onclick = () => {
-    popupContainer.classList.remove('active');
+button.onclick = function() {
+    modal.showModal()
 }
 

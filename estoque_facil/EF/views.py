@@ -5,6 +5,15 @@ from firebase_admin import firestore
 from firebase_admin import credentials
 from django.conf import settings
 
+
+
+
+
+
+
+
+
+
 # Isso aqui é o que tá inicializando o firebase, NAO MEXE
 def initialize_firebase():
     if not firebase_admin._apps:
@@ -114,3 +123,7 @@ def listProdutos_view(request):
         produtos_list.append(produto_data)
 
     return render(request, 'produtos/produtos.html', {'produtos': produtos_list})
+
+
+def home(request):
+    return render(request,'funcionarios/funcionarios.html')

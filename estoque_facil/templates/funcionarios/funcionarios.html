@@ -141,7 +141,8 @@
     </div>
      <button class="button21" id="butao">cadastro</button>
     <dialog id="dialogo">
-<form class="form" method="post" action="{% url 'addFuncionarios' %}>
+<form class="form" method="post" action="{% url 'addFuncionarios' %}">
+    {% csrf_token %}
     <div class="container" style="text-align: center;">
       <h1>Cadastro de Usuários</h1><br>
       
@@ -156,17 +157,24 @@
       </div>
       <br>
       <div class="mb-3">
+        <label for="Cargo" class="form-label">Cargo</label>
+        <input id="cargo" name="cargo" type="text" class="form-control form-control-sm" required>
+      </div>
+      <br>
+      <div class="mb-3">
         <label for="data" class="form-label">Data de Nascimento</label>
         <input id="data" name="data" type="date" class="form-control form-control-sm" required>
       </div>
        <br>
       <p>Sexo: </p>
-      <input type="radio" id="feminino" name="sexo" value="feminino" required>
-      <label for="feminino">Feminino</label>
-      <input type="radio" id="masculino" name="sexo" value="masculino" required>
-      <label for="feminino">Masculino</label>
-      <input type="radio" id="outro" name="sexo" value="outro" required>
-      <label for="feminino">Outro</label>
+<input type="radio" id="feminino" name="sexo" value="feminino" required>
+<label for="feminino">Feminino</label>
+
+<input type="radio" id="masculino" name="sexo" value="masculino" required>
+<label for="masculino">Masculino</label>
+
+<input type="radio" id="outro" name="sexo" value="outro" required>
+<label for="outro">Outro</label>
       <br><br>
       <div class="mb-3">
         <label for="tel" class="form-label">Telefone</label>
@@ -182,44 +190,27 @@
     </div>
 </form>
 </dialog>
-   
-    
-    
-    
-
     <div id="searchContainer">
         <i class="bi bi-search"></i>
         <div class="searchBar"><input type="search" name="searchFuncionario" id="searchFuncionario"></div>
     </div>
-
-
-
-
-
-
-    <div class="funcionariosContainer">
-        <div class="funcionarioSpecific">
-            <div class="funcionarioImgContainerBackground">
-                <div class="funcionarioImgContainer">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                        alt="funcionarioImg">
-                </div>
+<div class="funcionariosContainer">
+    {% for f in funcionarios %}
+    <div class="funcionarioSpecific">
+        <div class="funcionarioImgContainerBackground">
+            <div class="funcionarioImgContainer">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                     alt="funcionarioImg">
             </div>
-            <p>Nome</p>
-            <p>Cargo</p>
-            <p>ID: 000</p>
         </div>
-        <div class="funcionarioSpecific">
-            <div class="funcionarioImgContainerBackground">
-                <div class="funcionarioImgContainer">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                        alt="funcionarioImg">
-                </div>
-            </div>
-            <p>Nome</p>
-            <p>Cargo</p>
-            <p>ID: 000</p>
-        </div>
+        <p>{{ f.nome_funcionario }}</p>
+        <p>{{ f.cargo_funcionario }}</p>
+        <p>ID: {{ f.id }}</p>
+    </div>
+    {% empty %}
+    <p style="padding: 1rem;">Nenhum funcionário cadastrado.</p>
+    {% endfor %}
+</div>
     </div>
     </div>
 </body>

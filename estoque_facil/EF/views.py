@@ -5,15 +5,6 @@ from firebase_admin import firestore
 from firebase_admin import credentials
 from django.conf import settings
 
-
-
-
-
-
-
-
-
-
 # Isso aqui é o que tá inicializando o firebase, NAO MEXE
 def initialize_firebase():
     if not firebase_admin._apps:
@@ -96,31 +87,26 @@ def addAcao(request):
     else:
         return JsonResponse({"erro": "Método não permitido"}, status=405)
 
-def addFuncionario(request):
+def addFuncionarios(request):
     if request.method == 'POST':
         db = initialize_firebase()
 
-        nome_funcionario = request.POST.get('nome')
-        cpf_funcionario = request.POST.get('cpf')
-        data_funcionario = request.POST.get('data')
-        sexo_funcionario = request.POST.get('sexo')
-        tel_funcionario = request.POST.get('tel')
-        email_funcionario = request.POST.get('mail')
+        funcionarios_ref = db.collection("funcionarios")
+        quantidade = len(list(funcionarios_ref.stream()))
+        novo_id = str(quantidade + 1)
 
-        doc_ref = db.collection("funcionários").document()
+        doc_ref = db.collection("funcionarios").document(novo_id)
         doc_ref.set({
-            "nome_funcionario": nome_funcionario,
-            "cpf_funcionario": cpf_funcionario,
-            "data_funcionario": data_funcionario,
-            "sexo_funcionario": sexo_funcionario,
-            "tel_funcionario": tel_funcionario,
-            "email_funcionario": email_funcionario
-            
+            "nome_funcionario": request.POST.get('nome'),
+            "cargo_funcionario": request.POST.get('cargo'),
+            "cpf_funcionario": request.POST.get('cpf'),
+            "data_funcionario": request.POST.get('data'),
+            "sexo_funcionario": request.POST.get('sexo'),
+            "tel_funcionario": request.POST.get('tel'),
+            "email_funcionario": request.POST.get('mail')
         })
 
-        print("Funcionario cadastrado com sucesso!")  # Isso vai para o console
-
-        return redirect('funcionarios')  # Isso redireciona o usuário de volta para a página
+        return redirect('funcionarios')
     else:
         return JsonResponse({"erro": "Método não permitido"}, status=405)
 
@@ -151,6 +137,19 @@ def listProdutos_view(request):
         produtos_list.append(produto_data)
 
     return render(request, 'produtos/produtos.html', {'produtos': produtos_list})
+
+def listFuncionarios_view(request):
+    db = initialize_firebase()
+    funcionarios_ref = db.collection('funcionarios')
+    funcionarios = funcionarios_ref.stream()
+
+    funcionarios_list = []
+    for funcionario in funcionarios:
+        funcionario_data = funcionario.to_dict()
+        funcionario_data['id'] = funcionario.id
+        funcionarios_list.append(funcionario_data)
+
+    return render(request, 'funcionarios/funcionarios.html', {'funcionarios': funcionarios_list})
 
 
 def home(request):

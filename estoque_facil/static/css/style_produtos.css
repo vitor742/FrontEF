@@ -461,11 +461,28 @@ ul li.LinhasM {
 
 }
 
+.displayGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-right: 38vh;
+}
+
 .displayGroup2 {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    width: calc(20% - 15px); 
+    width: calc(16.6% - 15px); 
+    box-sizing: border-box;
+}
+
+.displayGroup2 label {
+    flex: 1;
+    margin: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .displayBtns {
@@ -566,10 +583,4 @@ ul li.LinhasM {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-}
-
-#defaultProdutosList {
-    background-color: #0E00AE;
-    border: solid 1px #0E00AE;
-    z-index: 1000;
 }

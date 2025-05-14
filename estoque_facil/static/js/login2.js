@@ -24,11 +24,11 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     event.preventDefault();
 
     const username = document.getElementById('username').value;
-    const accessKey = document.getElementById('access_key').value;
+    const cpf = document.getElementById('access_key').value;
 
     try {
-        const usersRef = collection(db, 'funcionários');
-        const q = query(usersRef, where('nome', '==', username), where('access_key', '==', accessKey));
+        const usersRef = collection(db, 'funcionarios');
+        const q = query(usersRef, where('nome_funcionario', '==', username), where('cpf_funcionario', '==', cpf));
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {

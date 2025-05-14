@@ -204,35 +204,35 @@
             {% for produto in produtos %}
                 <div class="displayGroup2">
                     <label>Produto</label>
-                    <button class="displayBtns">{{ tarefa.nomeProduto|default:"Sem Nome" }}</button>
+                    <button class="displayBtns">{{ produto.nome_produto|default:"Sem Nome" }}</button>
                 </div>
                 <div class="displayGroup2">
                     <label>Lote</label>
-                    <button class="displayBtns">{{ tarefa.loteProduto|default:"Sem Lote" }}</button>
+                    <button class="displayBtns">{{ produto.lote_produto|default:"Sem Lote" }}</button>
                 </div>
                 <div class="displayGroup2">
                     <label>Qnt Cx</label>
-                    <button class="displayBtns">{{ tarefa.qntCxProduto|default:"Sem Qnt Caixas" }}</button>
+                    <button class="displayBtns">{{ produto.qtd_produtoPCx|default:"Sem Qnt Caixas" }}</button>
                 </div>
                 <div class="displayGroup2">
-                    <label>Produtos/Cx</label>
-                    <button class="displayBtns">{{ tarefa.qntProdutoCx|default:"Sem Produtos/Cx" }}</button>
+                    <label>Prod/Cx</label>
+                    <button class="displayBtns">{{ produto.qtd_produto|default:"Sem Produtos/Cx" }}</button>
                 </div>
                 <div class="displayGroup2">
-                    <label>Dt Fabricação</label>
-                    <button class="displayBtns">{{ tarefa.dataFabProduto|default:"Sem Dt Fab" }}</button>
+                    <label>Dt Fab</label>
+                    <button class="displayBtns">{{ produto.data_fabricacao|default:"Sem Dt Fab" }}</button>
                 </div>
                 <div class="displayGroup2">
-                    <label>Dt Validade</label>
-                    <button class="displayBtns">{{ tarefa.dataValProduto|default:"Sem Dt Val" }}</button>
+                    <label>Dt Vali</label>
+                    <button class="displayBtns">{{ produto.data_validade|default:"Sem Dt Val" }}</button>
                 </div>
-            <div id="defaultProdutosList">
             {% empty %}
-                Nenhum produto encontrado
+                <p>Nenhum produto encontrado</p>
             {% endfor %}
-            </div>
         </div>
     </div>
+
+    
     
 </body>
 </html>

@@ -12,7 +12,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: black;
-    background-image: url('../images/background.png');
+    background-image: url('../images/Armação\ de\ Armazém\ Minimalista.png');
     background-size: cover;
     background-position: center;
 }
@@ -35,8 +35,8 @@ body {
 .caixadelogin {
     width: 420px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 2);
-    color: #fff;
+    border: 2px solid rgba(0, 0, 255, 2);
+    color: #000fda;
     border-radius: 10px;
     padding: 30px 40px;
     backdrop-filter: blur(20px);
@@ -58,11 +58,11 @@ body {
     border: 2px solid rgba(255, 255, 255, 2);
     border-radius: 40px;
     font-size: 16px;
-    color: #fff;
+    color: #000fda;
     padding: 20px 45px 20px 20px;
 }
 .ibox input::placeholder{
-    color: #fff;    
+    color: #000000;    
 }
 .ibox i {
     position: absolute;
@@ -91,14 +91,14 @@ body {
 .botao {
     width: 100%;
     height: 45px;
-    background: #fff;
+    background: #0602fa;
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0.1);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: #ffffff;
     font-weight: 600;
 }
 .registro-link{

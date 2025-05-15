@@ -13,7 +13,7 @@ import firebase_admin
 from firebase_admin import credentials
 from pathlib import Path
 
-FIREBASE_CREDENTIALS = "./config/Credentials.json"
+FIREBASE_CREDENTIALS = "./config/Cred.json"
 
 try:
     cred = credentials.Certificate(FIREBASE_CREDENTIALS)

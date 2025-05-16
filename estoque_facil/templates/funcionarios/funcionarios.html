@@ -19,11 +19,19 @@
         <header>
             <img src="{% static 'images/logo.png' %}"></img>
 
-            <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
-
-            <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
-
-            <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
+            <ul>
+                <li>
+                    <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
+                    <li>
+                        <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
+                        <ul class="dropdownConf">
+                            <li><a class="confbts" href="#">Suporte</a></li>
+                            <li><a class="confbts" href="#">preferencias</a></li>
+                        </ul>
+                    </li>
+                    <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
+                </li>
+            </ul>
 
 
             <button id="toggleTheme" class="toggle-theme-btn">

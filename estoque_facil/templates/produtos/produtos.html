@@ -16,13 +16,20 @@
     <header>
         <img src="{% static 'images/logo.png' %}" class="Logo_Estoque_Facil"></img>
 
-        <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
-
-        <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
-
-        <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
-
-
+        <ul>
+            <li>
+                <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
+                <li>
+                    <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
+                    <ul class="dropdownConf">
+                        <li><a class="confbts" href="#">alterar tema</a></li>
+                        <li><a class="confbts" href="#">Suporte</a></li>
+                        <li><a class="confbts" href="#">preferencias</a></li>
+                    </ul>
+                </li>
+                <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
+            </li>
+        </ul>
     </header>
 
     <!--Código do menu lateral-->
@@ -119,8 +126,7 @@
                 <p>©Estoque facil / Todos os direitos reservados </p>
             </li>
         </ul>
-        
-
+    
     </nav>
 </div>
     <div class="ProdutosT">

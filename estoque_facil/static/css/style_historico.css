@@ -123,14 +123,43 @@ img {
     margin-left: 350px;
     margin-top: 40px;
 }
-.FuncionariosT {
-    justify-content: left;
-    align-items: left;
-    display: block;
-    height: 100px;
-    text-align: left;
-    font-family: Arial;
-    font-size: 38px;
+
+.hist1 {
     margin-left: 350px;
-    margin-top: 40px; 
+    display: flex; 
+    background-color: #ffffff;
+    height: 60px;
+    width: 1500px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hist1 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    margin-bottom: 4px;
+}
+.hist1 a:hover {
+    text-decoration: none;
+    color: rgb(27, 16, 177);
+}
+.hist1 a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.r1t {
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    width: 1200px;
+    text-decoration: nones;
+}
+.r1d {
+    text-align: right;
+    background-color: #ffffff;
+    color: #0E00AE;
+}
+
+.r1t .r1d p {
+    font-size: 20px;
 }

@@ -118,7 +118,47 @@
 
     </nav>
     <div class="DashboardT">
-        <b>Dashboard</b>
+        <b>Historico de consulta</b>
+    </div>
+    <div class="espaçamento">
+        <div class="hist1">
+            <a href="{% url 'relatorios' %}">
+                <div class="r1t"><p>Relatorio de produtos a vencer no estoque por tipo</p></div>
+            </a>
+            <div class="r1d">
+                <p>16/03/2025</p>
+            </div>
+        </div>
+        <br>
+            <br>
+        <div class="hist1">
+            <a href="{% url 'produtos' %}">
+                <div class="r1t"><p>Produtos (19 adicionados)</p></div>
+            </a>
+            <div class="r1d">
+                <p>14/03/2025</p>
+            </div>
+        </div>
+        <br>
+            <br>
+        <div class="hist1">
+            <a href="{% url 'estabelecer_acao' %}">
+                <div class="r1t"><p>Estabelecer ação (4 tarefas atribuidas)</p></div>
+            </a>
+            <div class="r1d">
+                <p>21/02/2025</p>
+            </div>
+        </div>
+        <br>
+            <br>
+        <div class="hist1">
+            <a href="{% url 'funcionarios' %}">
+                <div class="r1t"><p>Funcionários (2 cadastros)</p></div>
+            </a>
+            <div class="r1d">
+                <p>16/02/2025</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

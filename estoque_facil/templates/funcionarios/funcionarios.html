@@ -19,19 +19,11 @@
         <header>
             <img src="{% static 'images/logo.png' %}"></img>
 
-            <ul>
-                <li>
-                    <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
-                    <li>
-                        <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
-                        <ul class="dropdownConf">
-                            <li><a class="confbts" href="#">Suporte</a></li>
-                            <li><a class="confbts" href="#">preferencias</a></li>
-                        </ul>
-                    </li>
-                    <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
-                </li>
-            </ul>
+            <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
+
+            <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
+
+            <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
 
 
             <button id="toggleTheme" class="toggle-theme-btn">
@@ -49,11 +41,6 @@
                     <h1>
                         Olá Usuário!
                     </h1>
-                </li>
-                <li class="Not">
-                    <p>
-                        Você tem 2 notificações hoje
-                    </p>
                 </li>
                 <li class="LinhasM">
                     <div></div>
@@ -139,15 +126,10 @@
         </nav>
     </div>
 
-    <div class="configContainer">
-
-
-    </div>
-
     <div class="FuncionariosT">
         <b>Funcionários</b>
     </div>
-     <button class="button21" id="butao">cadastro</button>
+     
     <dialog id="dialogo">
 <form class="form" method="post" action="{% url 'addFuncionarios' %}">
     {% csrf_token %}
@@ -201,6 +183,7 @@
     <div id="searchContainer">
         <i class="bi bi-search"></i>
         <div class="searchBar"><input type="search" name="searchFuncionario" id="searchFuncionario"></div>
+        <button class="button21" id="butao"><i class="bi bi-plus"></i></button>
     </div>
 <div class="funcionariosContainer">
     {% for f in funcionarios %}

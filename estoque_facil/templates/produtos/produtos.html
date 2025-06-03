@@ -10,26 +10,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="{% static 'js/produtos.js' %}" defer></script>
     <script src="{% static 'js/tema.js' %}" defer></script>
+    <script src="{% static 'js/acao.js' %}" defer></script>
 </head>
 <body>
 <div id="damageControl">
     <header>
         <img src="{% static 'images/logo.png' %}" class="Logo_Estoque_Facil"></img>
 
-        <ul>
-            <li>
-                <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
-                <li>
-                    <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
-                    <ul class="dropdownConf">
-                        <li><a class="confbts" href="#">alterar tema</a></li>
-                        <li><a class="confbts" href="#">Suporte</a></li>
-                        <li><a class="confbts" href="#">preferencias</a></li>
-                    </ul>
-                </li>
-                <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
-            </li>
-        </ul>
+        <a href="#"> <span class="icon"><i class="bi bi-bell"></i></span></a>
+
+        <a href="#"> <span class="icon"><i class="bi bi-gear"></i></span></a>
+
+        <a href="#"><span class="icon"><i class="bi bi-printer"></i></span></a>
+
+
     </header>
 
     <!--Código do menu lateral-->
@@ -41,11 +35,6 @@
                 <h1>
                     Olá Usuário!
                 </h1>
-            </li>
-            <li class="Not">
-                <p>
-                  Você tem 2 notificações hoje  
-                </p>
             </li>
             <li class="LinhasM">
                 <div></div>
@@ -126,7 +115,8 @@
                 <p>©Estoque facil / Todos os direitos reservados </p>
             </li>
         </ul>
-    
+        
+
     </nav>
 </div>
     <div class="ProdutosT">
@@ -202,12 +192,21 @@
 
         <div class="addProdutoContainer" id="infoProdutoContainer">
 
-        <div class="infoEditTools">
-            <button class="btnBase" id="editAcao"><i class="bi bi-pencil"></i></button>
-            <button class="btnBase" id="delAcao"><i class="bi bi-trash"></i></button>
-        </div>
-        <div class="displayGroup">
-            {% for produto in produtos %}
+            <div class="infoEditTools">
+                <button class="btnBase" id="editAcao"><i class="bi bi-pencil"></i></button>
+                <button class="btnBase" id="delAcao"><i class="bi bi-trash"></i></button>
+            </div>
+            <div class="displayGroup">
+                {% for produto in produtos %}
+                <form method="post" action="{% url 'delete_produto' %}" class="formDelete">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{ produto.id }}">
+                    <button type="submit" class="btnDelete" onclick="return confirm('Deseja realmente deletar esse produto?');">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </form>
+                <button class="btnEdit"><i class="bi bi-pencil"></i></button>
+            
                 <div class="displayGroup2">
                     <label>Produto</label>
                     <button class="displayBtns">{{ produto.nome_produto|default:"Sem Nome" }}</button>
@@ -237,8 +236,6 @@
             {% endfor %}
         </div>
     </div>
-
-    
     
 </body>
 </html>

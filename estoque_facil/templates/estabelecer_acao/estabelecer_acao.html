@@ -41,7 +41,7 @@
             <li class="LinhasM">
                 <div></div>
             </li>
-            <li class="item-menu">
+            <li class="item-menu"> 
                 <a href="{% url 'relatorios' %}">
                     <span class="icon"><i class="bi bi-table"></i></span>
                     <span class="txt-link">Relatórios</span>
@@ -145,10 +145,7 @@
 
     <div class="addAcaoContainer" id="infoAcaoContainer">
 
-        <div class="infoEditTools">
-            <button class="btnBase" id="editAcao"><i class="bi bi-pencil"></i></button>
-            <button class="btnBase" id="delAcao"><i class="bi bi-trash"></i></button>
-        </div>
+        
         <div class="displayGroup">
             {% for tarefa in tarefas %}
             <form method="post" action="{% url 'delete_acao' %}" class="formDelete">

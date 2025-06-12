@@ -42,6 +42,9 @@ body {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0,0,0.);
 }
+.logoEstoque {
+    justify-self: center;
+}
 
 .ibox{
     position: relative;

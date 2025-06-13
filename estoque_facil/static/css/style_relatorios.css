@@ -235,14 +235,12 @@ img {
     margin-left: 350px;
     height: 100px;
 }
-
 th {
     background-color:#c5c3e8;
 }
-
 th, td {
-    border: 1px solid black;
-    padding: 20px;
+    padding: 35px;
+    padding-inline: 70px;
     text-align: center;
 }
 .Tlinha2, .Tlinha4 {
@@ -254,4 +252,31 @@ th, td {
 table {
     border: 1px solid black;
     border-collapse: collapse;
+}
+.tabelaD2 {
+    border-radius: 20px;
+    width: 1500px;
+    border: 1px #000000;
+    justify-content: right;
+    margin-top: 130px;
+    margin-left: 350px;
+    height: 100px;
+}
+.RelatoriosEst2{
+    justify-content: left;
+    align-items: left;
+    display: block;
+    height: 100px;
+    text-align: left;
+    font-family: Arial;
+    font-size: 38px;
+    margin-left: 350px;
+    margin-top: 430px;
+    color: #7269CC;
+}
+.linha2{
+    height: 2px;
+    width: 1520px;
+    margin-left: 350px;
+    background-color: #000000;
 }

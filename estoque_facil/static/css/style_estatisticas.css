@@ -155,8 +155,8 @@ img {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Posiciona mais acima */
-    margin-top: 200px; /* Ajusta espaço acima */
-    background-color: #ffffff;
+    margin-top: 10px; /* Ajusta espaço acima */
+    background-color: #01ff16;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
@@ -165,25 +165,37 @@ img {
 
 .Cinza {   
     border-radius: 10px;
-    background-color: rgb(126, 126, 121); /* Cor de fundo amarelo */
+    background-color: rgb(108, 117, 107); /* Cor de fundo amarelo */
     display: flex; /* Ativar flexbox */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     text-align: center; /* Garante que o texto fique bem alinhado */
     font-size: 20px; /* Tamanho do texto */
     line-height: 200px;
+    margin-top: 10px;
 }
 
 .Verde {  
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Posiciona mais acima */
-    margin-top: 200px; /* Ajusta espaço acima */
-    background-color: #ffffff;
+    margin-top: 10px; /* Ajusta espaço acima */
+    background-color: #ff0000;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-    margin-left: 350px;
+    margin-left: 5px;
+}
+
+.data{
+    margin-left: 1630px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(102, 162, 240);
+    width: 125px;
+    border-radius: 10%;
+    padding: 10px;
+    font-weight: 400;
+    font-size: larger;
 }
 .containerBlocoDash :hover{
     background: #0E00AE;
@@ -221,7 +233,7 @@ img {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-    margin-left: 350px;
+    margin-left: 400px;
 }
 .chart-size {
     width: 600px; /* Defina a largura que deseja */

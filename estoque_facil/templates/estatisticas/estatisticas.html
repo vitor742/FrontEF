@@ -126,6 +126,8 @@
         <b>Estatística das Prateleiras</b>
     </div>
 
+    <div class="data"><b>24/11/2024</b></div>
+
     <div class="containerBlocoDash">
         <div class="R Vermelho">
             <p><u>Menos vencimentos no último mês</u></p>
@@ -173,38 +175,6 @@
         });
     </script>
 
-    <div style="width: 700px; height: 400px;" class="chart-container2">
-        <canvas id="line-chart2" class="chart-size2"></canvas>
-    </div>
-
-
-    <script>
-    const data2 = {
-        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
-        datasets: [{
-            label: "Investimento",
-            data: [1000, 1200, 1100, 1300, 1400, 1500],
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-        }]
-    };
-
-    const options2 = {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    };
-
-    const ctx2 = document.getElementById('line-chart').getContext('2d');
-    const chart2 = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: options
-    });
-</script>
-    
     
 </body>
 </html>

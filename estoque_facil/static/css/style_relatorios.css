@@ -203,12 +203,7 @@ img {
     margin-right: 35px;
     color: #7269CC;
 }
-.linha1{
-    height: 2px;
-    width: 1520px;
-    margin-left: 350px;
-    background-color: #000000;
-}
+
 .Rel1Tip {
     margin-left: 350px;
     margin-right: 1300px;
@@ -224,7 +219,6 @@ img {
     font-family: Arial;
     font-size: 34px; 
     margin-top: 5px;
-   
 }
 .tabelaD1 {
     border-radius: 20px;
@@ -242,6 +236,7 @@ th, td {
     padding: 35px;
     padding-inline: 70px;
     text-align: center;
+    border: 1px solid black;
 }
 .Tlinha2, .Tlinha4 {
     background-color: #f1f0ff;
@@ -258,7 +253,6 @@ table {
     width: 1500px;
     border: 1px #000000;
     justify-content: right;
-    margin-top: 130px;
     margin-left: 350px;
     height: 100px;
 }
@@ -268,15 +262,20 @@ table {
     display: block;
     height: 100px;
     text-align: left;
-    font-family: Arial;
+    font-family: Arial; 
     font-size: 38px;
     margin-left: 350px;
     margin-top: 430px;
     color: #7269CC;
 }
-.linha2{
+.linha3{
     height: 2px;
     width: 1520px;
     margin-left: 350px;
     background-color: #000000;
+    
+}
+
+.Tlinha6 {
+    background-color: #ffffff;
 }
